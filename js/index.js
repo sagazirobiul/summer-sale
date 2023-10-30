@@ -1,7 +1,12 @@
+let coupon = false;
 function addProduct(name, price){
     addToProductList(name);
     calculateTotal(price);
     calculateGrandTotal();
+    if(coupon){
+        calculateDiscount();
+    }
+    getElement('purchase').removeAttribute('disabled');
 }
 
 function getElement(id){
@@ -40,13 +45,13 @@ function calculateDiscount(){
 
     getElement('coupon').value = '';
     getElement('coupon-btn').setAttribute('disabled', true);
+    coupon = true;
 }
 
 
 function calculateGrandTotal(){
     const total = getElementValue('total-price');
     const discount = getElementValue('discount');
-    console.log(total, discount);
     const grandTotal = total - discount;
 
     getElement('grand-total').innerText = grandTotal;
