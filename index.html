@@ -1,11 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Summer Sale</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-color': '#E527B2',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
+
 <body>
-    <h1>Hello world</h1>
+    <header class="bg-[#F9F6E2] py-14">
+        <div class="md:container mx-auto flex justify-between items-center">
+            <div class="text-center flex-1 text-gray-950 space-y-12">
+                <h3 class="text-3xl font-medium">---SALE FEVER---</h3>
+                <h1 class="text-6xl font-bold">Purchase TK 200 or above & get <span class="text-primary-color">20%
+                        off</span></h1>
+                <div class="flex items-center justify-center mt-5">
+                    <p class="text-2xl">Use Promo Code</p>
+                    <button class="ml-5 btn btn-secondary text-2xl text-white">SELL200</button>
+                </div>
+            </div>
+            <div class="flex-1">
+                <img class="w-4/5 mx-auto" src="images/Summer 1.png" alt="">
+            </div>
+        </div>
+    </header>
+    <main class="pb-28 bg-[#F8F8F8]">
+        <div class="flex md:container mx-auto gap-6">
+            <div>
+                <!-- kitchenware section -->
+                <section>
+                    <h1 class="my-7 text-4xl font-semibold text-gray-950">Kitchenware</h1>
+                    <div class="grid grid-cols-3 gap-5">
+                        <!-- Card 1 -->
+                        <div class="card bg-base-100 shadow-xl">
+                            <figure class="px-10 pt-10 bg-gray-200 m-5">
+                                <img src="images/prod1.png" alt="K. Accessories" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center -mt-3">
+                                <div class="rating rating-md">
+                                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400"/>
+                                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" checked/>
+                                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <h3 class="cursor-pointer hover:underline text-xl text-gray-950 font-semibold">K. Accessories</h3>
+                                <p class="text-xl text-gray-500">39.00 Tk</p>
+                            </div>
+                        </div>
+    
+                        <!-- Card 2 -->
+                        <div class="card bg-base-100 shadow-xl">
+                            <figure class="px-10 pt-10 bg-gray-200 m-5">
+                                <img src="images/prod2.png" alt="Roti Maker" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center -mt-3">
+                                <div class="rating rating-md">
+                                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400"/>
+                                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" checked/>
+                                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <h3 class="text-xl text-gray-950 font-semibold">Roti Maker</h3>
+                                <p class="text-xl text-gray-500">25.00 TK</p>
+                            </div>
+                        </div>
+    
+                        <!-- Card 3 -->
+                        <div class="card bg-base-100 shadow-xl">
+                            <figure class="px-10 pt-10 bg-gray-200 m-5">
+                                <img src="images/prod3.png" alt="Shoes" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center -mt-3">
+                                <div class="rating rating-md">
+                                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400"/>
+                                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" checked/>
+                                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <h3 class="text-xl text-gray-950 font-semibold">Home Cooker</h3>
+                                <p class="text-xl text-gray-500">49.00 TK</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div>
+                <div class="bg-white px-5 py-4 mt-24 rounded-lg">
+                    <h3 class="text-2xl font-medium">Have coupon?</h3>
+                    <div class="mt-3 border-2 border-gray-300 rounded-md">
+                        <input class="outline-none px-4 py-2 text-gray-500" type="text" placeholder="Coupon code">
+                        <button class="btn btn-secondary rounded-r-md rounded-l-none text-white px-5">Apply</button>
+                    </div>
+                </div>
+                <div class="bg-white px-5 py-4 mt-6 rounded-lg">
+                    <div class="border-b-2 border-gray-300 pb-3">
+                        <h4 class="text-2xl my-1 text-gray-950 font-medium">1. Home Cooker</h4>
+                        <h4 class="text-2xl my-1 text-gray-950 font-medium">2. Home Cooker</h4>
+                    </div>
+                    <div class="pt-3 border-b-2 border-gray-300 pb-3">
+                        <h4 class="text-2xl my-1 text-gray-950 font-medium">Total price: <span class="text-gray-400">00</span></h4>
+                        
+                        <h4 class="text-2xl my-1 text-gray-950 font-medium">Discount: <span class="text-gray-400">00</span>
+                        
+                        </h4><h4 class="text-2xl my-1 text-gray-950 font-medium">Total: <span class="text-gray-400">00</span></h4>
+                    </div>
+                    <div class="btn btn-secondary mt-3 w-full text-white">Make Purchase</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/utilities.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>
