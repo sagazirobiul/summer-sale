@@ -53,7 +53,7 @@
                     <h1 class="my-7 text-4xl font-semibold text-gray-950">Kitchenware</h1>
                     <div class="grid grid-cols-3 gap-5">
                         <!-- Card 1 -->
-                        <div class="card bg-base-100 shadow-xl">
+                        <div onclick="addProduct('K. Accessories', 39);" class="card bg-base-100 cursor-pointer hover:shadow-lg hover:transition-shadow">
                             <figure class="px-10 pt-10 bg-gray-200 m-5">
                                 <img src="images/prod1.png" alt="K. Accessories" class="rounded-xl" />
                             </figure>
@@ -65,13 +65,13 @@
                                     <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                                     <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                                 </div>
-                                <h3 class="cursor-pointer hover:underline text-xl text-gray-950 font-semibold">K. Accessories</h3>
+                                <h3 class="text-xl text-gray-950 font-semibold">K. Accessories</h3>
                                 <p class="text-xl text-gray-500">39.00 Tk</p>
                             </div>
                         </div>
     
                         <!-- Card 2 -->
-                        <div class="card bg-base-100 shadow-xl">
+                        <div onclick="addProduct('Roti Maker', 25)" class="card bg-base-100 cursor-pointer hover:shadow-lg hover:transition-shadow">
                             <figure class="px-10 pt-10 bg-gray-200 m-5">
                                 <img src="images/prod2.png" alt="Roti Maker" class="rounded-xl" />
                             </figure>
@@ -89,9 +89,9 @@
                         </div>
     
                         <!-- Card 3 -->
-                        <div class="card bg-base-100 shadow-xl">
+                        <div onclick="addProduct('Home Cooker', 49)" class="card bg-base-100 cursor-pointer hover:shadow-lg hover:transition-shadow">
                             <figure class="px-10 pt-10 bg-gray-200 m-5">
-                                <img src="images/prod3.png" alt="Shoes" class="rounded-xl" />
+                                <img src="images/prod3.png" alt="Home Cooker" class="rounded-xl" />
                             </figure>
                             <div class="card-body items-center text-center -mt-3">
                                 <div class="rating rating-md">
@@ -112,21 +112,20 @@
                 <div class="bg-white px-5 py-4 mt-24 rounded-lg">
                     <h3 class="text-2xl font-medium">Have coupon?</h3>
                     <div class="mt-3 border-2 border-gray-300 rounded-md">
-                        <input class="outline-none px-4 py-2 text-gray-500" type="text" placeholder="Coupon code">
-                        <button class="btn btn-secondary rounded-r-md rounded-l-none text-white px-5">Apply</button>
+                        <input id="coupon" class="outline-none px-4 py-2 text-gray-500" type="text" placeholder="Coupon code">
+                        <button onclick="calculateDiscount()" id="coupon-btn" class="btn btn-secondary rounded-r-md rounded-l-none text-white px-5" disabled>Apply</button>
                     </div>
                 </div>
                 <div class="bg-white px-5 py-4 mt-6 rounded-lg">
-                    <div class="border-b-2 border-gray-300 pb-3">
-                        <h4 class="text-2xl my-1 text-gray-950 font-medium">1. Home Cooker</h4>
-                        <h4 class="text-2xl my-1 text-gray-950 font-medium">2. Home Cooker</h4>
+                    <div id="product-list-container" class="border-b-2 border-gray-300 pb-3">
+                        
                     </div>
                     <div class="pt-3 border-b-2 border-gray-300 pb-3">
-                        <h4 class="text-2xl my-1 text-gray-950 font-medium">Total price: <span class="text-gray-400">00</span></h4>
+                        <h4 class="text-2xl my-1 text-gray-950 font-medium">Total price: <span class="text-gray-400"><span id="total-price">00</span> Tk</span></h4>
                         
-                        <h4 class="text-2xl my-1 text-gray-950 font-medium">Discount: <span class="text-gray-400">00</span>
+                        <h4 class="text-2xl my-1 text-gray-950 font-medium">Discount: <span class="text-gray-400"><span id="discount">00</span> Tk</span></h4>
                         
-                        </h4><h4 class="text-2xl my-1 text-gray-950 font-medium">Total: <span class="text-gray-400">00</span></h4>
+                        <h4 class="text-2xl my-1 text-gray-950 font-medium">Grand Total: <span class="text-gray-400"><span id="grand-total">00</span> Tk</span></h4>
                     </div>
                     <div class="btn btn-secondary mt-3 w-full text-white">Make Purchase</div>
                 </div>
